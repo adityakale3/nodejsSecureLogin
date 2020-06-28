@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <h1>Signup</h1>
+        <form method="post">
+            <input type="text" placeholder="Username" name="username" class="input" value="<%= data.username %>"/><span><% if(errors.username){ %> <%= errors.username.msg %> <% } %></span>
+            <input type="text" placeholder="Name" name="name"  class="input" value="<%= data.name %>"/><span><% if(errors.name){ %> <%= errors.name.msg %> <% } %></span>
+            <input type="password" placeholder="Password" name="password" class="input"  value="<%= data.password %>"/><span><% if(errors.password){ %> <%= errors.password.msg %> <% } %></span>
+            <input type="password" placeholder="Confirm Password" name="cpassword" value="<%= data.cpassword %>" class="input" /><span><% if(errors.cpassword){ %> <%= errors.cpassword.msg %> <% } %></span>
+            <input type="submit" name="submit" value="Register" class="input" />
+        </form>
+    </center>
+</body>
+</html>
